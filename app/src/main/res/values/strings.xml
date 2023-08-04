@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Market List</string>
+
+    <!-- Tela de Login -->
+    <string name="frag_login_tv_email">Email</string>
+    <string name="frag_login_tv_password">Password</string>
+    <string name="frag_login_btn_login">Login</string>
+
+
 </resources>
