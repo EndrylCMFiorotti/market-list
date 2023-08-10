@@ -11,11 +11,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
         android:hint="@string/frag_login_tv_email"
-        app:layout_constraintVertical_chainStyle="packed"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
         app:layout_constraintBottom_toTopOf="@id/til_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tiet_email"
@@ -32,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
         android:hint="@string/frag_login_tv_password"
+        app:endIconMode="password_toggle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
+        android:enabled="false"
         android:text="@string/frag_login_btn_login"
         android:textAllCaps="true"
         app:layout_constraintBottom_toBottomOf="parent"

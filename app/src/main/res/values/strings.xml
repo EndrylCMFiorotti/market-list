@@ -1,10 +1,11 @@
 <resources>
+    <!-- Aplicativo -->
     <string name="app_name">Market List</string>
 
     <!-- Tela de Login -->
     <string name="frag_login_tv_email">Email</string>
-    <string name="frag_login_tv_password">Password</string>
-    <string name="frag_login_btn_login">Login</string>
-
-
+    <string name="frag_login_tv_password">Senha</string>
+    <string name="frag_login_btn_login">Entrar</string>
+    <string name="frag_login_message_success">Seja bem vindo %s</string>
+    <string name="frag_login_et_email_error">Email inválido.</string>
 </resources>
