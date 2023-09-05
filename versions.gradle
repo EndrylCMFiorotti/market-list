@@ -1,3 +1,11 @@
 ext.versions = [
-        'koin_version': '3.4.3'
+        'core_version': '1.10.1',
+        'appcompat_version': '1.6.1',
+        'materialdesign_version': '1.9.0',
+        'constraintlayout_version': '2.1.4',
+        'koin_version': '3.4.3',
+        'junit_version': '4.13.2',
+        'mockk_version': '1.13.2',
+        'rule_version': '2.2.0',
+        'coroutines_version': '1.6.4'
 ]
