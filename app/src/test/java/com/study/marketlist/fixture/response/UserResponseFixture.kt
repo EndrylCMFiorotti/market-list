@@ -11,8 +11,8 @@ class UserResponseFixture(
     companion object {
         fun getUserResponseComplete(
             withId: Int = 1,
-            withName: String = "Endryl Fiorotti",
-            withEmail: String = "endryl@gmail.com"
+            withName: String = "Gaspar",
+            withEmail: String = "gabriel@gmail.com"
         ) = UserResponseFixture(
             id = withId,
             name = withName,

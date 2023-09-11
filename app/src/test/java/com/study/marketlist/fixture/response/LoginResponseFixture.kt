@@ -17,7 +17,7 @@ class LoginResponseFixture(
             ),
             withError: ErrorResponse? = ErrorResponse(
                 id = 1,
-                message = "error"
+                message = "Usuário não encontrado."
             )
         ) = LoginResponseFixture(
             user = withUser,

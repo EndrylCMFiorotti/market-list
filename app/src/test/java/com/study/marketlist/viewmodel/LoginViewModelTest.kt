@@ -117,7 +117,7 @@ class LoginViewModelTest {
         }
 
     @Test
-    fun `WHEN requested to validate the login WITH correct information SHOULD return a error of graphQL`() =
+    fun `WHEN requested to validate the login WITH correct information SHOULD return an error of graphQL`() =
         runTest {
             coEvery {
                 repository.checkLogin(USER_EMAIL, USER_PASSWORD)
@@ -134,7 +134,7 @@ class LoginViewModelTest {
         }
 
     @Test
-    fun `WHEN requested to validate the login WITH correct information SHOULD return a exception from request`() =
+    fun `WHEN requested to validate the login WITH correct information SHOULD return an error from request`() =
         runTest {
             coEvery {
                 repository.checkLogin(USER_EMAIL, USER_PASSWORD)
@@ -149,7 +149,7 @@ class LoginViewModelTest {
         }
 
     @Test
-    fun `WHEN requested to validate the login WITH incorrect information SHOULD return a exception from request`() =
+    fun `WHEN requested to validate the login WITH incorrect information SHOULD return an error from request`() =
         runTest {
             coEvery {
                 repository.checkLogin(USER_EMAIL_INVALID, USER_PASSWORD)
