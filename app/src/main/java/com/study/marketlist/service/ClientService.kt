@@ -27,12 +27,12 @@ open class ClientService {
     }
 
     companion object {
-        private const val USER_ID = 1
-        private const val USER_NAME = "Gaspar"
-        private const val USER_EMAIL = "gabriel@gmail.com"
-        private const val USER_PASSWORD = "123456789"
+        const val USER_ID = 1
+        const val USER_NAME = "Gaspar"
+        const val USER_EMAIL = "gabriel@gmail.com"
+        const val USER_PASSWORD = "123456789"
 
-        private const val ERROR_ID = 1
-        private const val ERROR_MESSAGE = "Usuário não encontrado."
+        const val ERROR_ID = 1
+        const val ERROR_MESSAGE = "Usuário não encontrado."
     }
 }
