@@ -1,6 +1,5 @@
 package com.study.marketlist.fixture.response
 
-import com.study.marketlist.network.data.ErrorData
 import com.study.marketlist.network.response.ErrorResponse
 
 class ErrorResponseFixture(

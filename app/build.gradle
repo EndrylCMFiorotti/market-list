@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'jacoco'
 }
 
 apply from: rootProject.file("versions.gradle")
@@ -24,6 +25,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            testCoverageEnabled true
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -46,6 +50,7 @@ dependencies {
 
     implementation "io.insert-koin:koin-android:$versions.koin_version"
 
+    testImplementation "io.insert-koin:koin-test:$versions.koin_version"
     testImplementation "junit:junit:$versions.junit_version"
     testImplementation "io.mockk:mockk:$versions.mockk_version"
     testImplementation "androidx.arch.core:core-testing:$versions.rule_version"

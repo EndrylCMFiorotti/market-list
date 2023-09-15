@@ -5,28 +5,40 @@ import com.study.marketlist.network.response.LoginResponse
 import com.study.marketlist.network.response.UserResponse
 
 class LoginResponseFixture(
-    val user: UserResponse?,
-    val error: ErrorResponse?
+    val id: Int,
+    val name: String,
+    val email: String,
+    val errorId: Int,
+    val errorMessage: String,
+    val hasError: Boolean
 ) {
     companion object {
         fun getLoginResponseComplete(
-            withUser: UserResponse? = UserResponse(
-                id = 1,
-                name = "Endryl Fiorotti",
-                email = "endryl@gmail.com"
-            ),
-            withError: ErrorResponse? = ErrorResponse(
-                id = 1,
-                message = "Usuário não encontrado."
-            )
+            withId: Int = 1,
+            withName: String = "Gaspar",
+            withEmail: String = "gabriel@gmail.com",
+            withErrorId: Int = 1,
+            withErrorMessage: String = "error",
+            withHasError: Boolean = false
         ) = LoginResponseFixture(
-            user = withUser,
-            error = withError
+            id = withId,
+            name = withName,
+            email = withEmail,
+            errorId = withErrorId,
+            errorMessage = withErrorMessage,
+            hasError = withHasError
         )
     }
 
     fun build() = LoginResponse(
-        user = user,
-        error = error
+        user = if (hasError.not()) UserResponse(
+            id = id,
+            name = name,
+            email = email
+        ) else null,
+        error = if (hasError) ErrorResponse(
+            id = errorId,
+            message = errorMessage
+        ) else null
     )
 }

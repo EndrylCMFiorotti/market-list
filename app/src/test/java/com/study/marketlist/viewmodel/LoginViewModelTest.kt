@@ -105,7 +105,7 @@ class LoginViewModelTest {
             coEvery {
                 repository.checkLogin(USER_EMAIL, USER_PASSWORD)
             } returns ResultWrapper.Success(
-                LoginResponseFixture.getLoginResponseComplete(withError = null).build()
+                LoginResponseFixture.getLoginResponseComplete().build()
             )
 
             viewModel.validationLogin(USER_EMAIL, USER_PASSWORD)
@@ -122,7 +122,7 @@ class LoginViewModelTest {
             coEvery {
                 repository.checkLogin(USER_EMAIL, USER_PASSWORD)
             } returns ResultWrapper.Success(
-                LoginResponseFixture.getLoginResponseComplete(withUser = null).build()
+                LoginResponseFixture.getLoginResponseComplete(withHasError = true).build()
             )
 
             viewModel.validationLogin(USER_EMAIL, USER_PASSWORD)

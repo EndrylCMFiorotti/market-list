@@ -9,7 +9,7 @@ class UserPresentationFixture(
     companion object {
         fun getUserPresentationComplete(
             withId: Int = 1,
-            withName: String = "Endryl Fiorotti"
+            withName: String = "Gaspar"
         ) = UserPresentationFixture(
             id = withId,
             name = withName

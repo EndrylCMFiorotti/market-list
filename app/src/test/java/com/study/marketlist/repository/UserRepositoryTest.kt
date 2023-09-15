@@ -23,7 +23,7 @@ class UserRepositoryTest {
         runTest {
             val result = repository.checkLogin(USER_EMAIL, USER_PASSWORD)
             val expected = ResultWrapper.Success(
-                LoginResponseFixture.getLoginResponseComplete(withError = null).build()
+                LoginResponseFixture.getLoginResponseComplete().build()
             )
 
             assertEquals(expected, result)
@@ -34,7 +34,7 @@ class UserRepositoryTest {
         runTest {
             val result = repository.checkLogin(USER_EMAIL_INVALID, USER_PASSWORD)
             val expected = ResultWrapper.Success(
-                LoginResponseFixture.getLoginResponseComplete(withUser = null).build()
+                LoginResponseFixture.getLoginResponseComplete(withHasError = true).build()
             )
 
             assertEquals(expected, result)
@@ -45,7 +45,7 @@ class UserRepositoryTest {
         runTest {
             val result = repository.checkLogin(USER_EMAIL, USER_PASSWORD_INVALID)
             val expected = ResultWrapper.Success(
-                LoginResponseFixture.getLoginResponseComplete(withUser = null).build()
+                LoginResponseFixture.getLoginResponseComplete(withHasError = true).build()
             )
 
             assertEquals(expected, result)
@@ -56,15 +56,15 @@ class UserRepositoryTest {
         runTest {
             val result = repository.checkLogin(USER_EMAIL_INVALID, USER_PASSWORD_INVALID)
             val expected = ResultWrapper.Success(
-                LoginResponseFixture.getLoginResponseComplete(withUser = null).build()
+                LoginResponseFixture.getLoginResponseComplete(withHasError = true).build()
             )
 
             assertEquals(expected, result)
         }
 
     companion object {
-        private const val USER_EMAIL = "endryl@gmail.com"
-        private const val USER_EMAIL_INVALID = "endrylgmail.com"
+        private const val USER_EMAIL = "gabriel@gmail.com"
+        private const val USER_EMAIL_INVALID = "gabrielgmail.com"
         private const val USER_PASSWORD = "123456789"
         private const val USER_PASSWORD_INVALID = "1234"
     }
